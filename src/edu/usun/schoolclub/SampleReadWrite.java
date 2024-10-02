@@ -7,7 +7,7 @@ public class SampleReadWrite {
 
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(new FileInputStream(
-				"C:\\Users\\igors\\git\\usunschoolclub\\src\\edu\\usun\\schoolclub\\SampleReadWrite.txt"
+				"C:\\_igor\\eclipseworkspace\\usunschoolclub\\src\\edu\\usun\\schoolclub\\SampleReadWrite.txt"
 		));
 		while (sc.hasNextLine()) {
 			String line = sc.nextLine();
