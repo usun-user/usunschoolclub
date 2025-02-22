@@ -3,6 +3,9 @@ package edu.usun.schoolclub;
 import java.io.FileInputStream;
 import java.util.Scanner;
 
+/**
+ * A better example to read all data lines from the file without a leading line with number of how many lines to read.
+ */
 public class SampleReadWrite {
 
 	public static void main(String[] args) throws Exception {

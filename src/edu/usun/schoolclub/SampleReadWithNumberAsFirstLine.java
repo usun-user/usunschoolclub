@@ -3,6 +3,9 @@ package edu.usun.schoolclub;
 import java.io.FileInputStream;
 import java.util.Scanner;
 
+/**
+ * A sample to read data from a file, but just N lines starting from a second one, where number N is in the first line.
+ */
 public class SampleReadWithNumberAsFirstLine {
 
 	public static void main(String[] args) throws Exception {
