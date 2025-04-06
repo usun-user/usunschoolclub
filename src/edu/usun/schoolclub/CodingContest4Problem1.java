@@ -3,21 +3,20 @@ package edu.usun.schoolclub;
 import java.io.FileInputStream;
 import java.util.Scanner;
 
-public class PokerNight {
+public class CodingContest4Problem1 {
 
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(new FileInputStream(
-				"C:\\_igor\\eclipseworkspace\\usunschoolclub\\src\\edu\\usun\\schoolclub\\SampleReadWithNumberAsFirstLine.txt"
-		));
+				"C:\\_igor\\eclipseworkspace\\usunschoolclub\\src\\edu\\usun\\schoolclub\\SampleReadWithNumberAsFirstLine.txt"));
 		int numberOfLines = sc.nextInt();
 		if (numberOfLines <= 0) {
 			System.out.println("No lines to read.");
 			sc.close();
 			return;
-		}	
+		}
 		sc.nextLine();
 		String myHand = sc.nextLine();
-		int myHandValue = 0;	
+		int myHandValue = 0;
 		if ("HIGH CARD".equals(myHand)) {
 			myHandValue = 1;
 		} else if ("PAIR".equals(myHand)) {
@@ -38,7 +37,7 @@ public class PokerNight {
 			myHandValue = 9;
 		} else if ("ROYAL FLUSH".equals(myHand)) {
 			myHandValue = 10;
-		} 
+		}
 		int wins = 0;
 		int ties = 0;
 		int losses = 0;
@@ -65,7 +64,7 @@ public class PokerNight {
 				otherHandValue = 9;
 			} else if ("ROYAL FLUSH".equals(otherHand)) {
 				otherHandValue = 10;
-			} 
+			}
 			if (myHandValue > otherHandValue) {
 				wins++;
 			} else if (myHandValue == otherHandValue) {
