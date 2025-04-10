@@ -43,7 +43,7 @@ public class BreadthFirstSearch {
 		queue.add(startNode); // add startNode to back of queue
 		boolean reachedEnd = false;
 		while (!queue.isEmpty()) {
-			Node currentNode = queue.poll(); // make currentNode = node in the front of queue, add remove it from queue
+			Node currentNode = queue.poll(); // make currentNode = node in the front of queue, and remove it from queue
 			if (currentNode == endNode) { // usually do .equals , but memory address did not change so we did not do this
 				reachedEnd = true;
 				break; // get out of while loop
