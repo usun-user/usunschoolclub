@@ -10,11 +10,8 @@ public class SoundsFishy2 {
 				"C:\\_igor\\eclipseworkspace\\usunschoolclub\\src\\edu\\usun\\schoolclub\\SampleReadWithNumberAsFirstLine.txt"
 		));
 		int a = sc.nextInt();
-		sc.nextLine();
 		int b = sc.nextInt();
-		sc.nextLine();
 		int c = sc.nextInt();
-		sc.nextLine();
 		int d = sc.nextInt();
 		
 		if (a < b && b < c && c < d) {
