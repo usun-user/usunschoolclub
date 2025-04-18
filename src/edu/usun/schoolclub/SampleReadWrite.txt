@@ -1,15 +1,7 @@
-2 6
-a b
-b c
-o n
-, 4
-e f
-i $
-hi, you are cool!
-a b
-b c
-o n
-y t
-e f
-i $
-hi, you are cool!
+4 2
+2
+3
+4
+6
+7
+6

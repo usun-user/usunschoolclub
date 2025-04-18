@@ -1,11 +1,12 @@
 package edu.usun.schoolclub;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class MagicSquares {
-
-	public static void main(String[] args) throws Exception {
+	
+	public static void main(String[] args) throws FileNotFoundException {
 		Scanner sc = new Scanner(new FileInputStream(
 				"C:\\_igor\\eclipseworkspace\\usunschoolclub\\src\\edu\\usun\\schoolclub\\SampleReadWrite.txt"));
 		int[][] magicSquare = new int[4][4];
