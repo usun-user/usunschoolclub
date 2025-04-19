@@ -19,5 +19,3 @@ public class GW_CidsPlaylist {
 	}
 
 }
-
-
