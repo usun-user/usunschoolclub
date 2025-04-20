@@ -27,6 +27,40 @@ public class CodingContest4Problem2 {
 			int count8 = 0;
 			int count9 = 0;
 			for (int a = 0; a < str.length(); a++) {
+				switch (str.charAt(a)) {
+					case '0':
+						count0++;
+						break;
+					case '1':
+						count1++;
+						break;
+					case '2':
+						count2++;
+						break;
+					case '3':
+						count3++;
+						break;
+					case '4':
+						count4++;
+						break;
+					case '5':
+						count5++;
+						break;
+					case '6':
+						count6++;
+						break;
+					case '7':
+						count7++;
+						break;
+					case '8':
+						count8++;
+						break;
+					case '9':
+						count9++;
+						break;
+				}
+				
+				/*
 				if (str.charAt(a) == '0') {
 					count0++;
 				} else if (str.charAt(a) == '1') {
@@ -48,6 +82,7 @@ public class CodingContest4Problem2 {
 				} else if (str.charAt(a) == '9') {
 					count9++;
 				}
+				*/
 			}
 			int max = Math.max(count0, Math.max(count1, Math.max(count2, Math.max(count3, Math.max(count4,
 					Math.max(count5, Math.max(count6, Math.max(count7, Math.max(count8, count9)))))))));
