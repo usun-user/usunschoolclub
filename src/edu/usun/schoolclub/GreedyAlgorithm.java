@@ -31,11 +31,10 @@ public class GreedyAlgorithm {
 		sc.close();
 		*/
 		
-		// Greedy Algorithm example: Minimum number of activities (always pick smallest finish time)
-		// My way only works with unique finish times because of HashMap
+		// Greedy Algorithm example: Maximum number of activities (always pick smallest finish time)
 		
 		int[] start = {1, 3, 0, 5, 8, 5};
-		int[] finish = {2, 4, 6, 7, 9, 10};
+		int[] finish = {2, 4, 6, 7, 9, 9};
 		int currentTime = 0;
 		int numberOfActivities = 0;
 		
@@ -44,7 +43,9 @@ public class GreedyAlgorithm {
 		int lengthOfArray = finish.length;
 		
 		for (int i = 0; i < lengthOfArray; i++) {
-			activitiesMap.put(finish[i], start[i]);
+			if (activitiesMap.get(finish[i]) == null || activitiesMap.get(finish[i]) < start[i]) {
+				activitiesMap.put(finish[i], start[i]);
+			}
 		}
 		
 		Arrays.sort(finish);
