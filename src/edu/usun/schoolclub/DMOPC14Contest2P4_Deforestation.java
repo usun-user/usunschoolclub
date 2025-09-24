@@ -9,11 +9,12 @@ public class DMOPC14Contest2P4_Deforestation {
 		Scanner sc = new Scanner(new FileInputStream(
 				"C:\\_igor\\eclipseworkspace\\usunschoolclub\\src\\edu\\usun\\schoolclub\\SampleReadWrite.txt"));
 		int numberOfTrees = sc.nextInt();
-		int[] arrayOfMasses = new int[numberOfTrees];
+		//int[] arrayOfMasses = new int[numberOfTrees];
 		int[] massPSA = new int[numberOfTrees + 1];
 		for (int i = 0; i < numberOfTrees; i++) {
-			arrayOfMasses[i] = sc.nextInt();
-			massPSA[i + 1] = arrayOfMasses[i] + massPSA[i];
+			//arrayOfMasses[i] = sc.nextInt();
+			//massPSA[i + 1] = arrayOfMasses[i] + massPSA[i];
+			massPSA[i + 1] = sc.nextInt() + massPSA[i];
 		}
 		int numberOfQueries = sc.nextInt();
 		for (int j = 0; j < numberOfQueries; j++) {
