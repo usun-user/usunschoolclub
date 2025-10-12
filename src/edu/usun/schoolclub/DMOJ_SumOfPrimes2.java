@@ -1,14 +1,46 @@
 package edu.usun.schoolclub;
 
-import java.io.FileInputStream;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.StringTokenizer;
 import java.util.Arrays;
-import java.util.Scanner;
+//import java.io.InputStreamReader;
 
 public class DMOJ_SumOfPrimes2 {
 
 	public static void main(String[] args) throws Exception {
-		Scanner sc = new Scanner(new FileInputStream(
+		BufferedReader br = new BufferedReader(new FileReader(
 				"C:\\_igor\\eclipseworkspace\\usunschoolclub\\src\\edu\\usun\\schoolclub\\SampleReadWrite.txt"));
+		boolean[] isPrime = new boolean[100001];
+		Arrays.fill(isPrime, true);
+		isPrime[1] = false;
+		for (int i = 2; i * i < 100001; i++) {
+			if (isPrime[i]) {
+				for (int j = i * i; j < 100001; j += i) {
+					isPrime[j] = false;
+				}
+			}
+		}
+		
+		int[] prefixSum = new int[100001];
+		prefixSum[1] = 0;
+		for (int i = 2; i < 100001; i++) {
+			prefixSum[i] = prefixSum[i - 1];
+			if (isPrime[i]) {
+				prefixSum[i] += i;
+			}
+		}
+		
+		int queries = Integer.parseInt(br.readLine());
+		for (int i = 0; i < queries; i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			int lowRange = Integer.parseInt(st.nextToken());
+			int highRange = Integer.parseInt(st.nextToken());
+			System.out.println(prefixSum[highRange] - prefixSum[lowRange - 1]);
+		}
+		br.close();
+		
+		/*
 		int numberOfLines = sc.nextInt();
 		for (int i = 0; i < numberOfLines; i++) {
 			int minRange = sc.nextInt();
@@ -35,6 +67,7 @@ public class DMOJ_SumOfPrimes2 {
 			System.out.println(primeSum);
 		}
 		sc.close();
+		*/
 	}
 
 }

@@ -11,11 +11,13 @@ public class DMOJ_CosmicEraP3BattlePositions {
 		BufferedReader br = new BufferedReader(new FileReader(
 				"C:\\_igor\\eclipseworkspace\\usunschoolclub\\src\\edu\\usun\\schoolclub\\SampleReadWrite.txt"));
 		
+		// https://dmoj.ca/tips/
+		
 		//REMEMBER TO PUT " throws Exception " after " public static void main(String[] args) " when using BufferedReader
 		//but better to always to put throws exception on the websites
 		
 		//On websites like DMOJ, do what is below instead of the above while also importing java.io.InputStreamReader: 
-			//BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in));
+			//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		//java BufferedReader is 100x faster than Scanner class, especially for large inputs (ex. 10^5 lines is a lot)
 		//use BufferedReader whenever speed matters
