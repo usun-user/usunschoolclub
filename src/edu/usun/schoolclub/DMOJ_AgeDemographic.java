@@ -32,7 +32,9 @@ public class DMOJ_AgeDemographic {
 				int low = 0;
 				int high = numberOfViewers - 1;
 				while (low <= high) {
-					int mid = (high + low) / 2;
+					int mid = (high + low) / 2; // removes decimal (rounds down)
+					// mid = low + ((high - low) / 2); gives the same answer and is used to prevent overflow (mid > max value of int)
+					// don't need to worry about overflow this time because 2 x 10e9 < max value of int
 					if (ages[mid] <= targetHigh) {
 						low = mid + 1;
 					} else {
