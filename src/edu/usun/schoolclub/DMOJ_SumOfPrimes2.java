@@ -11,13 +11,14 @@ public class DMOJ_SumOfPrimes2 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new FileReader(
 				"C:\\_igor\\eclipseworkspace\\usunschoolclub\\src\\edu\\usun\\schoolclub\\SampleReadWrite.txt"));
-		boolean[] isPrime = new boolean[100001];
-		Arrays.fill(isPrime, true);
+		// sieve of eratosthenes 
+		boolean[] isPrime = new boolean[100001]; //create boolean array to mark prime numbers up to maxRange
+		Arrays.fill(isPrime, true); //assume all numbers are prime to start
 		isPrime[1] = false;
-		for (int i = 2; i * i < 100001; i++) {
-			if (isPrime[i]) {
+		for (int i = 2; i * i < 100001; i++) { //prime sieving to mark non-primes
+			if (isPrime[i]) { //only using primes, not multiples of primes
 				for (int j = i * i; j < 100001; j += i) {
-					isPrime[j] = false;
+					isPrime[j] = false; //mark all multiples of i as not prime
 				}
 			}
 		}

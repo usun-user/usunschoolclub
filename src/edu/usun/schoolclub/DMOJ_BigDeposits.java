@@ -12,6 +12,7 @@ public class DMOJ_BigDeposits {
 				"C:\\_igor\\eclipseworkspace\\usunschoolclub\\src\\edu\\usun\\schoolclub\\SampleReadWrite.txt"));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		//double percent = 1 + (Integer.parseInt(st.nextToken()) / (double) 100);
+		// double is imprecise for calculations with large numbers
 		int percentNumerator = Integer.parseInt(st.nextToken()) + 100;
 		int years = Integer.parseInt(st.nextToken());
 		long total = Long.parseLong(st.nextToken());
