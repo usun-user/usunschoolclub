@@ -11,6 +11,7 @@ public class DMOJ_LongestCommonSubsequence {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new FileReader(
 				"C:\\_igor\\eclipseworkspace\\usunschoolclub\\src\\edu\\usun\\schoolclub\\SampleReadWrite.txt"));
+		/*
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int sequenceLength1 = Integer.parseInt(st.nextToken());
 		int sequenceLength2 = Integer.parseInt(st.nextToken());
@@ -61,7 +62,10 @@ public class DMOJ_LongestCommonSubsequence {
 		}
 		memo[sequenceLength1][sequenceLength2] = currentLongest;
 		return currentLongest;
+		
+	*/
 	}
+	
 		
 		/*
 		int stones = Integer.parseInt(st.nextToken());
