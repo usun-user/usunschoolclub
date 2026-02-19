@@ -26,6 +26,11 @@ public class BufferedReaderExample {
 		so polling methods like BufferedReader.ready might spuriously return false 
 		even if the end of the input has not been reached. */
 		
+		/* Another example of BufferedReader use, but for reading one line:
+		StringTokenizer st2 = new StringTokenizer(br.readLine());
+		weights[i] = Integer.parseInt(st2.nextToken());
+		values[i] = Integer.parseInt(st2.nextToken()); */
+		
 		int stations = Integer.parseInt(br.readLine());
 		int minTroops = Integer.parseInt(br.readLine());
 		int waves = Integer.parseInt(br.readLine());
